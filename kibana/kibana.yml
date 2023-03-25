@@ -1,0 +1,14 @@
+## kibana.yml
+server.host: "0.0.0.0"
+server.port: "5601"
+server.name: "kibana"
+elasticsearch.hosts: ["http://192.168.144.5:9200/"]
+xpack:
+  apm.ui.enabled: false
+  graph.enabled: false
+  ml.enabled: false
+  monitoring.enabled: false
+  reporting.enabled: false
+  security.enabled: false
+  grokdebugger.enabled: false
+  searchprofiler.enabled: false
