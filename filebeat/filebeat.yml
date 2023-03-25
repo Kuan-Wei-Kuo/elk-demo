@@ -1,0 +1,12 @@
+## filebeat.yml
+
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths: ["/home/andy/elk-demo/traefik/logs/access.log*"]
+
+processors:
+  - add_id: ~
+
+output.logstash:
+  hosts: ["192.168.144.5:5000"]

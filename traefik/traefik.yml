@@ -1,0 +1,14 @@
+## traefik.yml
+
+# Docker configuration backend
+providers:
+  docker:
+    defaultRule: "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
+
+# API and dashboard configuration
+api:
+  insecure: true
+
+# Enable access log
+accessLog:
+  filePath: "/etc/traefik/logs/access.log"

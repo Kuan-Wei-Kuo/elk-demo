@@ -1,0 +1,19 @@
+## filebeat.yml
+
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths: ["/home/andy/elk-demo/traefik/logs/access.log*"]
+
+processors:
+  - add_id: ~
+
+output.file:
+  enabled: true
+  codec.json:
+    pretty: false
+  path: "/tmp/filebeat/"
+  filename: filebeat
+  rotate_every_kb: 10000
+  permissions: 0777
+
